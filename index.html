@@ -13,7 +13,7 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #eeeab9;
+      background: #eeb9b9;
       color: #161b3e;
       padding: 40px;
     }
@@ -32,10 +32,9 @@
     }
 
     .card {
-      background: #f2c7b3;
-      border-radius: 12px;
+      background: #f3cccc;
+      border-radius: 14px;
       padding: 20px;
-      margin-top: 20px;
     }
 
     .price {
@@ -48,14 +47,21 @@
       padding-left: 18px;
     }
 
-    /* ✨ IMAGE FIX (THIS IS THE MAGIC) ✨ */
+    /*  PORTFOLIO GRID */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
     .card img {
-      width: 280px;        /* change size here */
-      max-width: 100%;
+      width: 100%;
+      max-width: 320px;
       height: auto;
       display: block;
-      margin: 12px auto;   /* center image */
-      border-radius: 12px;
+      margin: 12px auto;
+      border-radius: 14px;
     }
 
     footer {
@@ -84,13 +90,13 @@
     </ul>
   </div>
 
-  <div class="card">
+  <div class="card" style="margin-top:20px;">
     <h3>Logo Design</h3>
     <div class="price">₹2000+</div>
     <p>Concept-based logo design suitable for branding and digital use.</p>
   </div>
 
-  <div class="card">
+  <div class="card" style="margin-top:20px;">
     <h3>Special Support Plan</h3>
     <div class="price">₹8000</div>
     <ul>
@@ -102,24 +108,28 @@
 
   <h2>Portfolio</h2>
 
-  <div class="card">
-    <img src="images/poster1.jpg" alt="Poster Design 1">
-    <p>Poster design for digital promotion.</p>
-  </div>
+  <div class="portfolio-grid">
 
-  <div class="card">
-    <img src="images/poster2.jpg" alt="Poster Design 2">
-    <p>Creative poster layout with color-focused design.</p>
-  </div>
+    <div class="card">
+      <img src="images/poster1.jpg" alt="Poster Design 1">
+      <p>Poster design for digital promotion.</p>
+    </div>
 
-  <div class="card">
-    <img src="images/logo2.jpg" alt="Logo Design">
-    <p>Minimal logo design.</p>
-  </div>
+    <div class="card">
+      <img src="images/poster2.jpg" alt="Poster Design 2">
+      <p>Creative poster layout with color-focused design.</p>
+    </div>
 
-  <div class="card">
-    <img src="images/ui1.jpg" alt="UI Design">
-    <p>UI layout focused on clean structure and usability.</p>
+    <div class="card">
+      <img src="images/logo2.jpg" alt="Logo Design">
+      <p>Minimal logo design.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/ui1.jpg" alt="UI Design">
+      <p>UI layout focused on clean structure and usability.</p>
+    </div>
+
   </div>
 
   <h2>Contact</h2>
