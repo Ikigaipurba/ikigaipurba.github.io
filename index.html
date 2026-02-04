@@ -45,9 +45,9 @@
 
     .card {
       background: #aac4ee;
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 20px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .price {
@@ -56,7 +56,7 @@
       margin: 10px 0;
     }
 
-    /* GRID LAYOUTS */
+    /* GRID */
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -77,23 +77,15 @@
     }
 
     .image-card img {
-      width: 60%;
-      max-height: 220px;
+      width: 25%;
       height: auto;
       border-radius: 12px;
       object-fit: contain;
       background: #fff;
     }
 
-    .image-card p {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    /* SMALLER vision board */
     .vision-board img {
-      width: 35%;
-      max-height: 200px;
+      width: 18%;
     }
 
     footer {
@@ -106,30 +98,29 @@
     .copyright {
       margin-top: 20px;
       font-size: 12px;
-      color: #333;
-      opacity: 0.85;
       max-width: 700px;
       margin: auto;
+      opacity: 0.85;
     }
 
-    /* HEART ANIMATION */
+    /*  HEARTS ANIMATION */
     .heart {
       position: fixed;
       bottom: -20px;
-      font-size: 18px;
-      color: #ff5c8a;
-      animation: floatUp 6s linear forwards;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: floatUp linear forwards;
+      z-index: 9999;
       pointer-events: none;
-      z-index: 999;
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
+      from {
+        transform: translateY(0);
         opacity: 1;
       }
-      100% {
-        transform: translateY(-110vh) scale(1.4);
+      to {
+        transform: translateY(-100vh);
         opacity: 0;
       }
     }
@@ -141,7 +132,6 @@
   <h1>Mystik Lady's Graphic Design & UI/UX Services</h1>
   <p>Clean, modern visual designs focused on clarity, aesthetics, and usability.</p>
 
-  <!-- SERVICES -->
   <h2>Services & Pricing</h2>
 
   <div class="card">
@@ -163,69 +153,15 @@
   <div class="card">
     <h3>Vision Board Design</h3>
     <div class="price">₹500+</div>
-    <p>Personalised manifestation vision boards. Pricing increases with complexity and themes.</p>
+    <p>Personalised manifestation vision boards. Pricing increases with complexity.</p>
   </div>
 
   <div class="card">
     <h3>Manifestation Wallpapers</h3>
     <div class="price">₹1000+</div>
-    <p>High-quality aesthetic wallpapers for manifestation and personal alignment.</p>
+    <p>High-quality aesthetic wallpapers for manifestation.</p>
   </div>
 
-  <div class="card">
-    <h3>Special Support Plan</h3>
-    <div class="price">₹8000</div>
-    <ul>
-      <li>2 weeks design & support</li>
-      <li>Direct communication via Instagram & Email</li>
-      <li>Priority edits and guidance</li>
-    </ul>
-  </div>
-
-  <!-- POSTERS -->
-  <h2>Posters</h2>
-  <div class="grid-2">
-    <div class="image-card">
-      <img src="images/poster1.jpg" alt="Poster Design 1">
-      <p>Poster Design 1</p>
-    </div>
-    <div class="image-card">
-      <img src="images/poster2.jpg" alt="Poster Design 2">
-      <p>Poster Design 2</p>
-    </div>
-  </div>
-
-  <!-- LOGOS -->
-  <h2>Logos</h2>
-  <div class="grid-3">
-    <div class="image-card">
-      <img src="images/logo1.jpg" alt="Logo Design 1">
-      <p>Logo Design 1</p>
-    </div>
-    <div class="image-card">
-      <img src="images/logo2.jpg" alt="Logo Design 2">
-      <p>Logo Design 2</p>
-    </div>
-    <div class="image-card">
-      <img src="images/logo3.jpg" alt="Logo Design 3">
-      <p>Logo Design 3</p>
-    </div>
-  </div>
-
-  <!-- UI UX -->
-  <h2>UI / UX Designs</h2>
-  <div class="grid-2">
-    <div class="image-card">
-      <img src="images/ui1.jpg" alt="UI Design 1">
-      <p>UI Design 1</p>
-    </div>
-    <div class="image-card">
-      <img src="images/ui4.jpg" alt="UI Design 2">
-      <p>UI Design 2</p>
-    </div>
-  </div>
-
-  <!-- VISION BOARD -->
   <h2>Vision Boards</h2>
   <div class="grid-3">
     <div class="image-card vision-board">
@@ -234,7 +170,6 @@
     </div>
   </div>
 
-  <!-- CONTACT -->
   <h2>Contact</h2>
   <div class="card">
     <p>
@@ -243,7 +178,6 @@
         cottagemystikstudio@email.com
       </a>
     </p>
-
     <p>
       Instagram:
       <a href="https://www.instagram.com/cottagemystik" target="_blank">
@@ -253,23 +187,23 @@
   </div>
 
   <footer>
-    © Design Services
+     Design Services
     <div class="copyright">
-      All designs showcased are original creations by Mystik Lady.  
-      Unauthorized copying, reproduction, or commercial use of these designs without permission is strictly prohibited.
+      All designs showcased are original creations by Mystik Lady.
+      Unauthorized copying or commercial use is strictly prohibited.
     </div>
   </footer>
-  
-  <!-- HEART SCRIPT -->
+
+  <!--  HEART SCRIPT -->
   <script>
     function createHeart() {
       const heart = document.createElement("div");
-      heart.classList.add("heart");
+      heart.className = "heart";
       heart.innerHTML = "";
 
       heart.style.left = Math.random() * 100 + "vw";
       heart.style.animationDuration = 4 + Math.random() * 3 + "s";
-      heart.style.fontSize = 14 + Math.random() * 14 + "px";
+      heart.style.fontSize = 14 + Math.random() * 18 + "px";
 
       document.body.appendChild(heart);
 
