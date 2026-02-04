@@ -16,6 +16,7 @@
       background: #fff1f1;
       color: #161b3e;
       padding: 40px;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -34,8 +35,8 @@
 
     a {
       color: #161b3e;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
 
     a:hover {
@@ -44,9 +45,9 @@
 
     .card {
       background: #aac4ee;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .price {
@@ -76,7 +77,8 @@
     }
 
     .image-card img {
-      width: 25%;
+      width: 60%;
+      max-height: 220px;
       height: auto;
       border-radius: 12px;
       object-fit: contain;
@@ -86,6 +88,12 @@
     .image-card p {
       margin-top: 10px;
       font-size: 14px;
+    }
+
+    /* SMALLER vision board */
+    .vision-board img {
+      width: 35%;
+      max-height: 200px;
     }
 
     footer {
@@ -101,8 +109,29 @@
       color: #333;
       opacity: 0.85;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
+    }
+
+    /* HEART ANIMATION */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 18px;
+      color: #ff5c8a;
+      animation: floatUp 6s linear forwards;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.4);
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -134,7 +163,7 @@
   <div class="card">
     <h3>Vision Board Design</h3>
     <div class="price">₹500+</div>
-    <p>Personalised manifestation vision boards. Pricing increases with complexity, themes, and custom elements.</p>
+    <p>Personalised manifestation vision boards. Pricing increases with complexity and themes.</p>
   </div>
 
   <div class="card">
@@ -200,23 +229,23 @@
   <h2>Vision Boards</h2>
   <div class="grid-3">
     <div class="image-card vision-board">
-  <img src="images/visionboard.jpg" alt="Vision Board Design">
-  <p>Vision Board Design</p>
-</div>
+      <img src="images/visionboard.jpg" alt="Vision Board Design">
+      <p>Vision Board Design</p>
+    </div>
   </div>
 
   <!-- CONTACT -->
   <h2>Contact</h2>
   <div class="card">
     <p>
-       Email:
+      Email:
       <a href="mailto:cottagemystikstudio@email.com">
         cottagemystikstudio@email.com
       </a>
     </p>
 
     <p>
-       Instagram:
+      Instagram:
       <a href="https://www.instagram.com/cottagemystik" target="_blank">
         @cottagemystik
       </a>
@@ -225,11 +254,32 @@
 
   <footer>
     © Design Services
-
     <div class="copyright">
-      All designs showcased are original creations by Mystik Lady. Except the images used for the vision board.
-      Unauthorized copying, reproduction, or commercial use of these designs without explicit permission is strictly prohibited.
+      All designs showcased are original creations by Mystik Lady.  
+      Unauthorized copying, reproduction, or commercial use of these designs without permission is strictly prohibited.
     </div>
   </footer>
+
+  <!-- HEART SCRIPT -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 4 + Math.random() * 3 + "s";
+      heart.style.fontSize = 14 + Math.random() * 14 + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 600);
+  </script>
+
 </body>
 </html>
