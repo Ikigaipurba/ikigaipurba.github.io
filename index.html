@@ -1,147 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Design Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Services</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+{
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #eeb9b9;
-      color: #161b3e;
-      padding: 40px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eeb9b9;
+  color: #161b3e;
+  padding: 40px;
+}
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 
-    h2 {
-      margin-top: 50px;
-    }
+h2 {
+  margin-top: 60px;
+}
 
-    p {
-      line-height: 1.6;
-    }
+p {
+  line-height: 1.6;
+}
 
-    .card {
-      background: #f3cccc;
-      border-radius: 14px;
-      padding: 20px;
-    }
+.card {
+  background: #f3cccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
-    ul {
-      padding-left: 18px;
-    }
+/* GRID FOR IMAGES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
 
-    /*  PORTFOLIO GRID */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
-    }
+.grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-    .card img {
-      width: 100%;
-      max-width: 320px;
-      height: auto;
-      display: block;
-      margin: 12px auto;
-      border-radius: 14px;
-    }
+.caption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+}
 
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #555;
-      text-align: center;
-    }
-  </style>
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Mystik Lady's Graphic Design & UI/UX Services</h1>
-  <p>Clean, modern visual designs focused on clarity, aesthetics, and usability.</p>
+<h1>Mystik Lady's Graphic Design & UI/UX Services</h1>
+<p>Clean, modern visual designs focused on clarity, aesthetics, and usability.</p>
 
-  <h2>Services & Pricing</h2>
+<!-- SERVICES -->
+<h2>Services & Pricing</h2>
 
-  <div class="card">
-    <h3>Poster Design</h3>
-    <div class="price">₹1200+</div>
-    <ul>
-      <li>Pricing depends on color complexity</li>
-      <li>Illustrations & custom elements</li>
-      <li>Detail level of design</li>
-    </ul>
+<div class="card">
+  <h3>Poster Design</h3>
+  <div class="price">₹1200+</div>
+  <ul>
+    <li>Color complexity based pricing</li>
+    <li>Custom illustrations & layouts</li>
+    <li>High quality digital posters</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Logo Design</h3>
+  <div class="price">₹2000+</div>
+  <p>Concept-based logo design suitable for branding & digital use.</p>
+</div>
+
+<div class="card">
+  <h3>Vision Board Design</h3>
+  <div class="price">₹500+</div>
+  <ul>
+    <li>Personalised manifestation boards</li>
+    <li>Aesthetic & goal-focused design</li>
+    <li>Price increases based on complexity</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Manifestation Wallpapers</h3>
+  <div class="price">₹1000+</div>
+  <ul>
+    <li>High-resolution phone & desktop wallpapers</li>
+    <li>Custom affirmations & energy themes</li>
+    <li>Pricing based on quantity & detailing</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Special Support Plan</h3>
+  <div class="price">₹8000</div>
+  <ul>
+    <li>2 weeks design & support</li>
+    <li>Direct communication via Instagram & Email</li>
+    <li>Priority edits & guidance</li>
+  </ul>
+</div>
+
+<!-- PORTFOLIO -->
+<h2>Posters</h2>
+<div class="grid">
+  <div>
+    <img src="images/poster1.jpg" alt="Poster 1">
+    <div class="caption">Poster Design 1</div>
   </div>
-
-  <div class="card" style="margin-top:20px;">
-    <h3>Logo Design</h3>
-    <div class="price">₹2000+</div>
-    <p>Concept-based logo design suitable for branding and digital use.</p>
+  <div>
+    <img src="images/poster2.jpg" alt="Poster 2">
+    <div class="caption">Poster Design 2</div>
   </div>
+</div>
 
-  <div class="card" style="margin-top:20px;">
-    <h3>Special Support Plan</h3>
-    <div class="price">₹8000</div>
-    <ul>
-      <li>2 weeks design & support</li>
-      <li>Direct communication via Instagram & Email</li>
-      <li>Priority edits and guidance</li>
-    </ul>
+<h2>Logos</h2>
+<div class="grid">
+  <div>
+    <img src="images/logo1.jpg" alt="Logo 1">
+    <div class="caption">Logo Design 1</div>
   </div>
-
-  <h2>Portfolio</h2>
-
-  <div class="portfolio-grid">
-
-    <div class="card">
-      <img src="images/poster1.jpg" alt="Poster Design 1">
-      <p>Poster design for digital promotion.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/poster2.jpg" alt="Poster Design 2">
-      <p>Creative poster layout with color-focused design.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/logo2.jpg" alt="Logo Design">
-      <p>Minimal logo design.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/ui1.jpg" alt="UI Design">
-      <p>UI layout focused on clean structure and usability.</p>
-    </div>
-
+  <div>
+    <img src="images/logo2.jpg" alt="Logo 2">
+    <div class="caption">Logo Design 2</div>
   </div>
-
-  <h2>Contact</h2>
-
-  <div class="card">
-    <p>Email: cottagemystik@email.com</p>
-    <p>Instagram: @cottagemystik</p>
+  <div>
+    <img src="images/logo3.jpg" alt="Logo 3">
+    <div class="caption">Logo Design 3</div>
   </div>
+</div>
 
-  <footer>
-    © Design Services
-  </footer>
+<h2>UI / UX Designs</h2>
+<div class="grid">
+  <div>
+    <img src="images/ui1.jpg" alt="UI 1">
+    <div class="caption">UI Design 1</div>
+  </div>
+  <div>
+    <img src="images/ui2.jpg" alt="UI 2">
+    <div class="caption">UI Design 2</div>
+  </div>
+</div>
+
+<h2>Vision Boards</h2>
+<div class="grid">
+  <div>
+    <img src="images/visionboard1.jpg" alt="Vision Board 1">
+    <div class="caption">Vision Board Design</div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<h2>Contact</h2>
+<div class="card">
+  <p>Email: cottagemystik@email.com</p>
+  <p>Instagram: @cottagemystik</p>
+</div>
+
+<footer>
+© Design Services
+</footer>
+<footer>
+  <p>© 2026 Mystik Lady. All designs, artworks, posters, logos, UI/UX layouts, vision boards, and wallpapers displayed on this website are original creations and are protected under copyright law.</p>
+
+  <p>Unauthorized copying, reproduction, redistribution, or use of any content without prior written permission is strictly prohibited.</p>
+
+  <p>Design ownership remains with the creator unless explicitly transferred through a written agreement.</p>
+</footer>
 
 </body>
 </html>
