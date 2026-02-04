@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mystik Lady – Design Services</title>
+  <title>Design Services</title>
 
   <style>
     * {
@@ -45,11 +45,7 @@
       margin: 10px 0;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    /* GRID SYSTEM */
+    /* GRID LAYOUTS */
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -65,34 +61,43 @@
     .image-card {
       background: #ffffff;
       border-radius: 12px;
-      padding: 12px;
+      padding: 10px;
       text-align: center;
     }
 
     .image-card img {
       width: 100%;
-      height: auto;
+      height: auto;              /* IMPORTANT: prevents cutting */
       border-radius: 10px;
-      object-fit: contain;
+      object-fit: contain;       /* shows full design */
+      background: #fff;
     }
 
     .image-card p {
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 14px;
     }
 
     footer {
       margin-top: 80px;
       font-size: 13px;
+      color: #444;
+      text-align: center;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 12px;
       color: #333;
+      opacity: 0.85;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Mystik Lady’s Graphic Design & UI/UX Services</h1>
-  <p>Clean, aesthetic and intuitive designs created with intention.</p>
+  <h1>Mystik Lady's Graphic Design & UI/UX Services</h1>
+  <p>Clean, modern visual designs focused on clarity, aesthetics, and usability.</p>
 
   <!-- SERVICES -->
   <h2>Services & Pricing</h2>
@@ -101,28 +106,28 @@
     <h3>Poster Design</h3>
     <div class="price">₹1200+</div>
     <ul>
-      <li>Pricing depends on color & concept complexity</li>
-      <li>Custom illustrations & layouts</li>
-      <li>High-quality digital output</li>
+      <li>Pricing depends on color complexity</li>
+      <li>Illustrations & custom elements</li>
+      <li>Detail level of design</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Logo Design</h3>
     <div class="price">₹2000+</div>
-    <p>Concept-based logo design for branding & digital platforms.</p>
+    <p>Concept-based logo design suitable for branding and digital use.</p>
   </div>
 
   <div class="card">
     <h3>Vision Board Design</h3>
     <div class="price">₹500+</div>
-    <p>Personalised manifestation vision boards. Pricing increases based on customization.</p>
+    <p>Personalised manifestation vision boards. Pricing increases with complexity, themes, and custom elements.</p>
   </div>
 
   <div class="card">
     <h3>Manifestation Wallpapers</h3>
     <div class="price">₹1000+</div>
-    <p>Aesthetic wallpapers designed for intention setting & manifestation.</p>
+    <p>High-quality aesthetic wallpapers for manifestation and personal alignment.</p>
   </div>
 
   <div class="card">
@@ -131,7 +136,7 @@
     <ul>
       <li>2 weeks design & support</li>
       <li>Direct communication via Instagram & Email</li>
-      <li>Priority edits & guidance</li>
+      <li>Priority edits and guidance</li>
     </ul>
   </div>
 
@@ -173,14 +178,15 @@
       <p>UI Design 1</p>
     </div>
     <div class="image-card">
-      <img src="images/ui2.jpg" alt="UI Design 2">
+      <img src="images/ui3.jpg" alt="UI Design 2">
+" alt="UI Design 2">
       <p>UI Design 2</p>
     </div>
   </div>
 
   <!-- VISION BOARD -->
   <h2>Vision Boards</h2>
-  <div class="grid-2">
+  <div class="grid-3">
     <div class="image-card">
       <img src="images/visionboard.jpg" alt="Vision Board Design">
       <p>Vision Board Design</p>
@@ -190,16 +196,17 @@
   <!-- CONTACT -->
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: cottagemystik@email.com</p>
+    <p>Email: cottagemystikstudio@email.com</p>
     <p>Instagram: @cottagemystik</p>
   </div>
 
-  <!-- COPYRIGHT -->
   <footer>
-    <p>
-      © 2026 Mystik Lady. All designs displayed on this website are original works created by the designer.  
-      Reproduction, redistribution, or use of any design without written permission is strictly prohibited.
-    </p>
+    © Design Services
+
+    <div class="copyright">
+      All designs showcased are original creations by Mystik Lady.  
+      Unauthorized copying, reproduction, or commercial use of these designs without permission is strictly prohibited.
+    </div>
   </footer>
 
 </body>
